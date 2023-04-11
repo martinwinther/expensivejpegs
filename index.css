@@ -32,7 +32,7 @@ p {
 
 .subheading {
     display: block;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #d0aaff;
 }
 
@@ -54,12 +54,12 @@ a:active {
 
 .btn {
     font-size: 1.125rem;
+    text-align: center;
     font-weight: 500;
     text-decoration: none;
-    display:block;
-    text-align: center;   
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
+    display: block;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
     border-radius: 4.6px;
 }
 
@@ -105,23 +105,28 @@ header,
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
-
 }
 
 .main-image {
-    display: block;
     width: 100%;
-    max-width: 640px ;
-    min-width: 300px;
-    margin: 0 auto 2em ;
- 
+    display: block;
+    max-width: 640px;
+    margin: 0 auto 2em;
 }
 
+.section-two-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
 
 .feature-image {
     width: 100%;
-    border-radius: 5px;
-    margin-bottom: 1em;
+    border-radius: 4.6px;
+}
+
+.feature-item {
+    flex: 1 260px;
 }
 
 footer {
@@ -131,14 +136,12 @@ footer {
 
 /* ----- NAVIGATION ----- */
 
-
-
 nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.125;    
+    font-size: 1.125rem;
     padding: 0.85em 0;
-    display: block;    
+    display: block;
 }
 
 ul {
@@ -147,24 +150,24 @@ ul {
     list-style-type: none;
 }
 
-
-
-
 /* ----- MEDIA QUERIES ----- */
 
-@media (min-width: 480px) {
-    .section-two-image-container {
-        display: flex;
-        justify-content: space-between;
-    }   
+@media (max-width: 767px) {
+    header {
+        text-align: center;
+    }
 
-    .feature-image {
-        width: 49%;      
+    nav {
+        margin-top: 1.5em;
+    }
 
+    li:not(:last-child) {
+        border-bottom: 1px dotted #a190b6;
     }
 }
 
 @media (min-width: 768px) {
+
     header,
     section,
     footer {
@@ -182,9 +185,8 @@ ul {
     }
 
     nav li {
-        margin-left: 1.25em;        
+        margin-left: 1.25em;
     }
-
 
     .btn {
         display: inline-block;
@@ -199,40 +201,11 @@ ul {
         font-size: 1.75rem;
     }
 
-    p {
-        font-size: 1.125rem;
-    }
-
     .subheading {
         font-size: 1.25rem;
     }
-   
+
+    p {
+        font-size: 1.125rem;
+    }
 }
-
-@media (max-width: 767px) {
-    header {
-        text-align: center;       
-          
-    }
-
-    nav {
-        margin-top: 1.5em;
-        
-
-    }
-
-    li:not(:last-child) {
-        border-bottom: 1px dotted #a190b6;
-        
-    }
-
-}
-
-
-
-/* Common breakpoints:
-Min:
-480px phones
-768px tablets
-1024px small pc screens
-1280px desktops */
